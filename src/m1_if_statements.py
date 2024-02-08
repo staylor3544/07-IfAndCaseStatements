@@ -1,7 +1,7 @@
 txt = "The quick brown fox jumps over the lazy dog."
 
 ###############################################################################
-# TODO: 1. (2 pts)
+# DONE: 1. (2 pts)
 #
 #   Write a function called is_positive() that takes one parameter:
 #     - number (float)
@@ -13,9 +13,14 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def is_positive(float):
+    if float >= 0:
+        return True
+    elif float < 0:
+        return False
+    
 ###############################################################################
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #
 #   Write a function called contains() that takes two parameters:
 #     - str (string)
@@ -33,8 +38,15 @@ txt = "The quick brown fox jumps over the lazy dog."
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def contains(substr):
+    if substr in txt:
+        return True
+    if substr not in txt:
+        return False
+    
+print(contains("lazy dog"))
 ###############################################################################
-# TODO: 3. (3 pts)
+# DONE: 3. (3 pts)
 #
 #   Write a function called display_rating() that takes one parameter:
 #     - rating (float)
@@ -63,3 +75,19 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def display_rating(float):
+    if float <= 5 and float >= 4:
+        return "WOW you are an amazing sparkly princess!"
+    elif float < 4 and float >= 3:
+        return "You are a slightly ok sparkly princess."
+    elif float < 3 and float >= 2:
+        return "Um... you are quite a bad princess. You dont deserve sparkles."
+    elif float < 2 and float >= 1:
+        return "You need to reevaluate you life and aspirations to be a sparkly princess. Never show your face here again."
+    else:
+        return "Invalid score given."
+    
+print(display_rating(2.8))
+    
+
+    

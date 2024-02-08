@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   Write a function called color_picker() that prints out a message to a user.
 #
@@ -16,9 +16,27 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def color_picker(): 
+    color = input("What is the name of the color you want to pick? (ps. they might be very specific colors involving pink, purple, sparkly pink, and rainbows) : ")
+    print("")
+    match color:
+        case "pink":
+            print("You picked the best color!")
+        case "purple":
+            print("You picked the second best color!")
+        case "sparkly pink":
+            print("You picked the best color thats even better cause sparkles!")
+        case "rainbow":
+            print("You picked every color which makes you the best!")
+        case _:
+            print("Unknown Color! But good try though!")
 
+color_picker()
+
+
+    
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   Write a function called grade() that tells a student what letter grade they
 #   got on an assignment based on the percentage they indicate.
@@ -36,3 +54,21 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def grade():
+    grade = float(input("What is your grade percentage? Make sure you enter your grade as a decimal : "))
+    print("")
+    if .9 <= grade <= 1.0:
+        print("You should have recieved an A! Good Job")
+    elif .8 <= grade < .9:
+        print("You should have recieved a B. OK job.")
+    elif .7 <= grade < .8:
+        print("You should have recieved a C... Do better.")
+    elif .6 <= grade < .7:
+        print("You managed to get a D. Thats just sad.")
+    elif .0 <= grade < .6:
+        print("You FAILED! HOW COULD YOU")
+    else:
+        print("Invalid score! You either lied, got extra credit, or did not read instructions.")
+
+grade()
+
