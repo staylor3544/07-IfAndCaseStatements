@@ -55,20 +55,21 @@ color_picker()
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 def grade():
-    grade = float(input("What is your grade percentage? Make sure you enter your grade as a decimal : "))
-    print("")
-    if .9 <= grade <= 1.0:
-        print("You should have recieved an A! Good Job")
-    elif .8 <= grade < .9:
-        print("You should have recieved a B. OK job.")
-    elif .7 <= grade < .8:
-        print("You should have recieved a C... Do better.")
-    elif .6 <= grade < .7:
-        print("You managed to get a D. Thats just sad.")
-    elif .0 <= grade < .6:
-        print("You FAILED! HOW COULD YOU")
-    else:
-        print("Invalid score! You either lied, got extra credit, or did not read instructions.")
+    grade = float(input("What is your grade percentage? Make sure you enter your grade as a decimal: "))
+    match grade:
+        case "0.9 <= grade <= 1.0":
+            print("You should have received an A! Good Job")
+        case "0.8 <= grade < 0.9":
+            print("You should have received a B. OK job.")
+        case "0.7 <= grade < 0.8":
+            print("You should have received a C... Do better.")
+        case "0.6 <= grade < 0.7":
+            print("You managed to get a D. That's just sad.")
+        case "0.5 <= grade < 0.6":
+            print("You FAILED! HOW COULD YOU")
+        case _:
+            print("Invalid score! You either lied, got extra credit, or did not read instructions.")
 
 grade()
+
 
