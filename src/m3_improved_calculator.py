@@ -64,16 +64,16 @@ def remainder(num1, num2):
 def if_calc():
     num1= float(input("Hello! I'm ur new calculator! What is your first number?: " ))
     num2= float(input("What is your second number?: " ))
-    operation = input("What order of operation would you like to do? addition, subtraction, multiplication, division, or remainder: ")
-    if operation == "addition":
+    operation = input("What order of operation would you like to do? (+) Add, (-) Subtract, (*) Multiply, (/) Division, or ($) remainder: ")
+    if operation == "+":
         print("You chose addition, and your answer is", addition(num1, num2))
-    elif operation == "subtraction":
+    elif operation == "-":
         print("You chose subraction, and your answer is", subtraction(num1, num2))
-    elif operation == "multiplication":
+    elif operation == "*":
         print("You chose multiplication and your answer is", multiplication(num1, num2))
-    elif operation == "division":
+    elif operation == "/":
         print("You chose division and your answer is", division(num1, num2))
-    elif operation == "remainder":
+    elif operation == "$":
         print("You chose to find the remainder and your answer is", remainder(num1,num2))
     else:
         print("Invalid Operation")
@@ -94,17 +94,17 @@ if_calc()
 def case_calc():
     num1= float(input("Hello! I'm ur new calculator! What is your first number?: " ))
     num2= float(input("What is your second number?: " ))
-    operation = input("What order of operation would you like to do? addition, subtraction, multiplication, division, or remainder: ")
+    operation = input("What order of operation would you like to do? (+) Add, (-) Subtract, (*) Multiply, (/) Division, or ($) remainder : ")
     match operation:
-        case "addition":
+        case "+":
             print("You chose addition, and your answer is", addition(num1, num2))
-        case "subtraction":
+        case "-":
             print("You chose subraction, and your answer is", subtraction(num1, num2))
-        case "multiplication":
+        case "*":
             print("You chose multiplication and your answer is", multiplication(num1, num2))
-        case "division":
+        case "/":
             print("You chose division and your answer is", division(num1, num2))
-        case "remainder":
+        case "$":
             print("You chose to find the remainder and your answer is", remainder(num1,num2))
         case _:
             print("Invalid Operation")
